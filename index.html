@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muckleneuk Guest House | Pretoria</title>
+<meta name="description" content="Enjoy a cozy stay at Muckleneuk Guest House in Pretoria. Overnight from R600, or R750 with breakfast. Call or WhatsApp to book.">
+<style>
+:root{--plum:#3a1f4d;--plum2:#4b2a63;--gold:#d9b46a;--cream:#fbf7f0;--ink:#241b2b;--muted:#6f6577}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Helvetica Neue',Arial,sans-serif;line-height:1.65}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font-family:inherit}
+.demo{background:var(--gold);color:#2a1a05;text-align:center;font-size:11px;letter-spacing:2px;padding:5px;font-weight:700}
+nav{position:fixed;top:24px;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;transition:.3s;color:#fff}
+nav.solid{top:0;background:rgba(58,31,77,.96);padding:12px 20px}
+.logo{font-family:Georgia,serif;font-size:19px;letter-spacing:1px}
+.logo span{color:var(--gold)}
+.links{display:flex;gap:18px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;align-items:center}
+.links .hide{display:none}
+@media(min-width:780px){.links .hide{display:inline}}
+.btn{display:inline-block;padding:14px 28px;border:1px solid var(--gold);background:var(--gold);color:#2a1a05;letter-spacing:1.5px;font-size:13px;text-transform:uppercase;font-weight:700;cursor:pointer}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.btn.dark{background:var(--plum);border-color:var(--plum);color:#fff}
+.btn.sm{padding:9px 18px;font-size:12px}
+.hero{min-height:100vh;min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:92px 0 64px;overflow:hidden;background:#2a1238}
+.hero::before{content:'';position:absolute;inset:-30px;background:url('house.jpg') center/cover no-repeat;filter:blur(22px) brightness(.5);transform:scale(1.1)}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,14,50,.55),rgba(35,14,50,.15) 45%,rgba(35,14,50,.75))}
+.hpic{width:100%;display:block;border-radius:6px;margin:18px 0 20px;box-shadow:0 12px 40px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.25)}
+.hero .in{position:relative;z-index:2;padding:0 18px;max-width:880px;width:100%}
+.hero small{letter-spacing:5px;font-size:12px;text-transform:uppercase;color:#f1dcae}
+.hero h1{font-size:clamp(30px,7.5vw,46px);line-height:1.1;margin:10px 0 0}
+.hero p{font-size:16px;opacity:.95;margin-bottom:22px}
+.hero .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.scroll{position:absolute;z-index:2;bottom:16px;left:0;right:0;text-align:center;font-size:12px;letter-spacing:3px;opacity:.8;animation:bob 1.8s infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+.rates{background:var(--plum);color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));text-align:center}
+.rates div{padding:18px 10px;border-right:1px solid #573570}
+.rates b{display:block;font-family:Georgia,serif;font-size:24px;color:var(--gold);font-weight:400}
+.rates span{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#d9cce3}
+section{padding:66px 20px}
+.wrap{max-width:1000px;margin:auto}
+.eyebrow{text-align:center;color:#9a6f1f;letter-spacing:4px;font-size:12px;text-transform:uppercase}
+h2{text-align:center;font-size:32px;margin:6px 0 14px}
+.lead{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 30px}
+.about img{width:100%;max-height:420px;object-fit:cover;display:block;border-radius:4px;cursor:pointer}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:26px}
+.f{background:#fff;text-align:center;padding:20px 10px;border-radius:4px;box-shadow:0 4px 16px rgba(0,0,0,.05);font-size:14px}
+.f i{display:block;font-style:normal;font-size:26px;margin-bottom:4px}
+.rooms{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.room{background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.07)}
+.room img{width:100%;height:250px;object-fit:cover;display:block;cursor:pointer}
+.room .b{padding:22px}
+.room h3{font-size:24px;margin-bottom:2px}
+.room p{font-size:14px;color:var(--muted);margin-bottom:12px}
+.price{font-family:Georgia,serif;font-size:30px;color:var(--plum);margin-bottom:12px}
+.price small{font-size:12px;color:var(--muted);font-family:Arial}
+.gal{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.gal img{width:100%;height:220px;object-fit:cover;display:block;cursor:pointer}
+.book{background:#efe3d3}
+.bwrap{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));max-width:900px;margin:auto}
+form{background:#fff;padding:22px}
+form label{display:block;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+form input,form select,form textarea{width:100%;padding:12px;border:1px solid #dccfbd;background:#fffdf9;font-size:15px;margin-bottom:12px}
+form .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+form .btn{width:100%;text-align:center}
+.cinfo a.row{display:flex;gap:14px;align-items:center;background:#fff;padding:16px;margin-bottom:12px}
+.cinfo .ic{font-size:22px}.cinfo b{display:block}.cinfo span{font-size:13px;color:var(--muted)}
+.map{width:100%;height:320px;border:0;margin-top:6px}
+footer{background:var(--plum);color:#d5c7e0;text-align:center;padding:34px 20px 90px;font-size:13px}
+footer b{color:#fff;font-family:Georgia,serif;font-size:18px;font-weight:400}
+#fab{position:fixed;right:14px;bottom:16px;z-index:40;background:#1faa59;color:#fff;font-weight:700;padding:13px 18px;border-radius:30px;font-size:14px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:60;align-items:center;justify-content:center;padding:10px}
+#lb img{max-width:100%;max-height:100%}
+</style>
+</head>
+<body>
+<div class="demo">DEMO WEBSITE</div>
+
+<nav id="nav">
+  <a class="logo" href="#top">Muckleneuk <span>Guest House</span></a>
+  <div class="links">
+    <a class="hide" href="#rooms">Rooms</a><a class="hide" href="#gallery">Gallery</a><a class="hide" href="#find">Find us</a>
+    <a class="btn sm" href="#book">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="in">
+    <small>Pretoria</small>
+    <h1>Muckleneuk Guest House</h1>
+    <img class="hpic" src="house.jpg" alt="Muckleneuk Guest House, full view of the house from outside">
+    <p>Enjoy a cozy stay at 228 Celliers Street, Muckleneuk, in the heart of Pretoria.</p>
+    <div class="row">
+      <a class="btn" href="https://wa.me/27767337473?text=Hi%20Muckleneuk%20Guest%20House%2C%20I%20would%20like%20to%20make%20a%20booking." target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn ghost" href="tel:+27767337473">Call 076 733 7473</a>
+    </div>
+  </div>
+  <div class="scroll">SCROLL &#8595;</div>
+</header>
+
+<div class="rates">
+  <div><b>R600</b><span>Overnight</span></div>
+  <div><b>R750</b><span>With breakfast</span></div>
+  <div><b>Always open</b><span>Book any time</span></div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="eyebrow">Welcome</div>
+    <h2>Your home in Muckleneuk</h2>
+    <p class="lead">Muckleneuk Guest House offers a warm, welcoming stay in one of Pretoria&rsquo;s quiet leafy suburbs. Relax in a comfortable room, enjoy a cooked breakfast in our dining room, and unwind on the garden patio.</p>
+    <img src="house.jpg" alt="Muckleneuk Guest House building and garden" onclick="openLb(this)">
+    <div class="feat">
+      <div class="f"><i>&#128716;</i>Comfortable rooms</div>
+      <div class="f"><i>&#127859;</i>Breakfast available</div>
+      <div class="f"><i>&#127795;</i>Garden patio</div>
+      <div class="f"><i>&#128337;</i>Always open</div>
+    </div>
+  </div>
+</section>
+
+<section id="rooms" style="padding-top:10px">
+  <div class="wrap">
+    <div class="eyebrow">Rates</div>
+    <h2>Choose your stay</h2>
+    <p class="lead">Simple, clear prices per night.</p>
+    <div class="rooms">
+      <div class="room">
+        <img src="room1.jpg" alt="Comfortable bed with bedside lamps" onclick="openLb(this)">
+        <div class="b">
+          <h3>Overnight</h3>
+          <p>A comfortable room for the night, without breakfast.</p>
+          <div class="price">R600 <small>per night, without breakfast</small></div>
+          <a class="btn sm dark" href="#book" onclick="setOpt('Overnight (R600)')">Book overnight</a>
+        </div>
+      </div>
+      <div class="room">
+        <img src="dining.jpg" alt="Breakfast room with set tables" onclick="openLb(this)">
+        <div class="b">
+          <h3>Overnight with Breakfast</h3>
+          <p>Your comfortable room plus breakfast in our dining room.</p>
+          <div class="price">R750 <small>per night, with breakfast</small></div>
+          <a class="btn sm dark" href="#book" onclick="setOpt('Overnight with breakfast (R750)')">Book with breakfast</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="padding-top:20px">
+  <div class="wrap">
+    <div class="eyebrow">Gallery</div>
+    <h2>Take a look inside</h2>
+    <p class="lead">Tap a photo to enlarge it.</p>
+    <div class="gal">
+      <img src="room1.jpg" alt="Room" onclick="openLb(this)">
+      <img src="room2.jpg" alt="Room with warm lighting" onclick="openLb(this)">
+      <img src="room3.jpg" alt="Room with wooden headboards" onclick="openLb(this)">
+      <img src="patio.jpg" alt="Patio entrance" onclick="openLb(this)">
+      <img src="dining.jpg" alt="Dining room" onclick="openLb(this)">
+      <img src="house.jpg" alt="Guest house exterior" onclick="openLb(this)">
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="eyebrow">Reservations</div>
+    <h2>Book your stay</h2>
+    <p class="lead">Send us your details and we will confirm availability on WhatsApp.</p>
+    <div class="bwrap">
+      <form onsubmit="sendBooking();return false">
+        <label>Your name</label><input id="bn" required>
+        <label>What would you like?</label>
+        <select id="bo">
+          <option>Overnight (R600)</option>
+          <option>Overnight with breakfast (R750)</option>
+        </select>
+        <div class="two">
+          <div><label>Date</label><input id="bd" type="date"></div>
+          <div><label>Guests</label><input id="bg" type="number" min="1" value="2"></div>
+        </div>
+        <label>Message (optional)</label><textarea id="bm" rows="2"></textarea>
+        <button class="btn" type="submit">Send on WhatsApp</button>
+      </form>
+      <div class="cinfo">
+        <a class="row" href="https://wa.me/27767337473?text=Hi%20Muckleneuk%20Guest%20House%2C%20I%20would%20like%20to%20make%20a%20booking." target="_blank" rel="noopener"><div class="ic">&#128172;</div><div><b>WhatsApp</b><span>076 733 7473</span></div></a>
+        <a class="row" href="tel:+27767337473"><div class="ic">&#128222;</div><div><b>Call</b><span>076 733 7473</span></div></a>
+        <a class="row" href="mailto:228mgh@gmail.com?subject=Booking%20enquiry"><div class="ic">&#9993;&#65039;</div><div><b>Email</b><span>228mgh@gmail.com</span></div></a>
+        <a class="row" href="https://www.facebook.com/search/top?q=Muckleneuk%20Guest%20house%20pretoria" target="_blank" rel="noopener"><div class="ic">&#128156;</div><div><b>Facebook</b><span>Muckleneuk Guest house pretoria</span></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap">
+    <div class="eyebrow">Location</div>
+    <h2>Find us</h2>
+    <p class="lead">228 Celliers Street, Muckleneuk, Pretoria, 0002</p>
+    <iframe class="map" loading="lazy" title="Map to Muckleneuk Guest House"
+      src="https://www.google.com/maps?q=228+Celliers+Street,+Muckleneuk,+Pretoria,+0002,+South+Africa&output=embed"></iframe>
+    <div style="text-align:center;margin-top:16px">
+      <a class="btn dark sm" href="https://www.google.com/maps/search/?api=1&query=228+Celliers+Street+Muckleneuk+Pretoria+0002" target="_blank" rel="noopener">Open in Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>Muckleneuk Guest House</b><br>228 Celliers Street, Muckleneuk, Pretoria 0002<br>076 733 7473 &middot; 228mgh@gmail.com<br><br>
+  Demo website designed by NovaWeb Atelier26
+</footer>
+
+<a id="fab" href="https://wa.me/27767337473?text=Hi%20Muckleneuk%20Guest%20House%2C%20I%20would%20like%20to%20make%20a%20booking." target="_blank" rel="noopener">&#128172; Book on WhatsApp</a>
+<div id="lb" onclick="this.style.display='none'"><img id="lbimg" alt=""></div>
+
+<script>
+var nav=document.getElementById('nav');
+function onS(){nav.classList.toggle('solid',window.scrollY>60)}
+window.addEventListener('scroll',onS);onS();
+function openLb(el){document.getElementById('lbimg').src=el.src;document.getElementById('lb').style.display='flex'}
+function setOpt(t){var s=document.getElementById('bo');for(var i=0;i<s.options.length;i++){if(s.options[i].text===t){s.selectedIndex=i}}}
+function sendBooking(){
+  var m='Hi Muckleneuk Guest House, I would like to book.\nName: '+document.getElementById('bn').value
+   +'\nOption: '+document.getElementById('bo').value
+   +'\nDate: '+(document.getElementById('bd').value||'not sure yet')
+   +'\nGuests: '+document.getElementById('bg').value
+   +(document.getElementById('bm').value?'\nMessage: '+document.getElementById('bm').value:'');
+  window.open('https://wa.me/27767337473?text='+encodeURIComponent(m),'_blank');
+}
+</script>
+</body>
+</html>
